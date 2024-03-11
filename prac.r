@@ -1,21 +1,3 @@
-install.packages("ggplot2")
-library(ggplot2)
-your_data <- read.csv("your_dataset.csv")
-your_data <- na.omit(your_data)
-ggplot(your_data, aes(x = x, y = y)) +
-  geom_point() +
-  ggtitle("Your Plot Title") +
-  xlab("X-axis Label") +
-  ylab("Y-axis Label")
-ggplot(your_data, aes(x = x, y = y)) +
-  geom_point(aes(color = is.na(y))) +
-  ggtitle("Your Plot Title") +
-  xlab("X-axis Label") +
-  ylab("Y-axis Label") +
-  scale_color_manual(values = c("TRUE" = "red", "FALSE" = "blue"), name = "Missing Values")
-
-
-
 barplot(blacks,names.arg=year, xlab="Years", ylab="No. of Blacks", main="Car chart")
 blacks : numbers to plot on the Y-axis
 years: individual bar ka label on the x axis
